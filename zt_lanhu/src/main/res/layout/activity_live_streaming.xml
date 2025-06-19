@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3E50"> <!-- Approximate background color -->
+<!--
+    &lt;!&ndash; Top Bar &ndash;&gt;
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar_layout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#1F2B38" 
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back" 
+            android:padding="16dp"
+            app:tint="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_live_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Live-Mosi"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_back_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/horizontal_scroll_prices"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"/>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_prices"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintStart_toEndOf="@+id/tv_live_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HF Bid:108.725 Ask:108.730"
+                    android:textColor="#E74C3C"
+                    android:paddingStart="8dp" android:paddingEnd="8dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LTCUSD Bid:108.123"
+                    android:textColor="#2ECC71"
+                    android:paddingStart="8dp" android:paddingEnd="8dp"/>
+                &lt;!&ndash; Add more price items here &ndash;&gt;
+            </LinearLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    &lt;!&ndash; Viewer Count &ndash;&gt;
+    <LinearLayout
+        android:id="@+id/viewer_count_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#80000000" 
+        android:padding="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_viewer" 
+            app:tint="@android:color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1,245"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    &lt;!&ndash; Main Content Image &ndash;&gt;
+    <ImageView
+        android:id="@+id/iv_main_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_streamer_bg" 
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_input_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    &lt;!&ndash; Right Sidebar &ndash;&gt;
+    <LinearLayout
+        android:id="@+id/right_sidebar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar_layout">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_revival_card"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_revival_card" /> 
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:text="1"
+                android:background="@drawable/badge_background_red"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:layout_gravity="top|end"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复活卡"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"/>
+
+        <ImageView
+            android:id="@+id/iv_leaderboard"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_leaderboard"
+            android:layout_marginTop="16dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排行榜"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    &lt;!&ndash; Chat Area (RecyclerView) &ndash;&gt;
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat_messages"
+        android:layout_width="0dp"
+        android:layout_height="200dp" 
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="80dp" 
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_input_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_chat_message" />
+
+    &lt;!&ndash; Bottom Input Bar &ndash;&gt;
+    <LinearLayout
+        android:id="@+id/bottom_input_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1F2B38"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/et_chat_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="说点什么..."
+            android:textColorHint="#AABBC3"
+            android:textColor="@android:color/white"
+            android:background="@null"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/iv_smiley"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_smiley"
+            app:tint="#AABBC3"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/iv_open_position"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_open_position"
+            app:tint="#AABBC3"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建仓"
+            android:textColor="#AABBC3"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp">
+            <ImageView
+                android:id="@+id/iv_holdings"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_holdings"
+                app:tint="#AABBC3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="16dp"
+                android:text="2"
+                android:background="@drawable/badge_background_blue"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:layout_gravity="top|end"
+                android:layout_marginEnd="-8dp"
+                android:layout_marginTop="-4dp"/>
+        </FrameLayout>
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="持仓"
+            android:textColor="#AABBC3"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp"/>
+
+        <ImageView
+            android:id="@+id/iv_more_options"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_more_horizontal"
+            app:tint="#AABBC3"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

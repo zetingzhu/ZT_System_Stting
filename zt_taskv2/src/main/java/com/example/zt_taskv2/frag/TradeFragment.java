@@ -1,0 +1,38 @@
+package com.example.zt_taskv2.frag;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.zt_taskv2.act.ActivityB;
+import com.example.zt_taskv2.act.ActivityC;
+import com.example.zt_taskv2.R;
+
+public class TradeFragment extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_trade, container, false);
+        Button btnToActivityB = view.findViewById(R.id.btn_to_activity_b);
+        btnToActivityB.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ActivityB.class);
+            startActivity(intent);
+        });
+        Button btnToActivityC = view.findViewById(R.id.btn_to_activity_c);
+        btnToActivityC.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ActivityC.class);
+            startActivity(intent);
+        });
+
+
+        return view;
+    }
+}
