@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SystemSettingTrae</string>
+    <string name="current_language">this is english</string>
+
+    <string name="update_language">Modification Internationalization</string>
+    <string name="update_theme">Modify the accent color</string>
+    <string name="tv_light">Light theme</string>
+    <string name="tv_dark">Dark theme</string>
+</resources>

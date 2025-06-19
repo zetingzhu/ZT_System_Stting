@@ -1,0 +1,7 @@
+<resources>
+    <!-- 定义语言选项数组 -->
+    <string-array name="language_options">
+        <item>English</item>
+        <item>中文</item>
+    </string-array>
+</resources>

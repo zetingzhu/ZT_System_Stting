@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SystemSettingLingma</string>
+
+    <string name="current_language">this is english code</string>
+    <string name="select_language">Select Language</string>
+    <string name="update_language">Modification Internationalization</string>
+    <string name="update_theme">Modify the accent color</string>
+    <string name="tv_light">Light theme</string>
+    <string name="tv_dark">Dark theme</string>
+
+    <!-- 新增: 添加缺失的字符串资源 -->
+    <string name="select_theme">Select Theme</string>
+    <string name="light_theme">Light Theme</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="system_theme">System Theme</string>
+
+    <!-- 新增: 用于按钮的文本 -->
+    <string name="english">English</string>
+    <string name="chinese">中文</string>
+</resources>

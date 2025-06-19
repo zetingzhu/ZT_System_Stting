@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ZT_System_Stting</string>
+    <string name="update_language">Modification Internationalization</string>
+    <string name="update_theme">Modify the accent color</string>
+</resources>

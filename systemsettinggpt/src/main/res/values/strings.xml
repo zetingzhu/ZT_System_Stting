@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SystemSettingGPT</string>
+    <string name="current_language">this is englisth code</string>
+    <string name="update_language">Modification Internationalization</string>
+    <string name="update_theme">Modify the accent color</string>
+    <string name="tv_light">Light theme</string>
+    <string name="tv_dark">Dark theme</string>
+</resources>

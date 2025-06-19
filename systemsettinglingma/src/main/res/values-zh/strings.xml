@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SystemSettingLingma</string>
+    <string name="current_language">这个一个中文</string>
+    <string name="update_language">修改国际化</string>
+    <string name="update_theme">修改主题色</string>
+    <string name="tv_light">浅色主题 </string>
+    <string name="tv_dark">深色主图</string>
+</resources>

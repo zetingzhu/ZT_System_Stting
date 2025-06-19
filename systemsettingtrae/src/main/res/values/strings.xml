@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SystemSettingTrae</string>
+    <string name="current_language">这一个中文国际化</string>
+    <string name="update_language">修改国际化</string>
+    <string name="update_theme">修改主题色</string>
+    <string name="tv_light">浅色主题 </string>
+    <string name="tv_dark">深色主图</string>
+</resources>
