@@ -39,11 +39,6 @@ class MainActivity : AppCompatActivity() {
         handleIntentExtras(intent) // Handle initial intent
     }
 
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
-
-
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent) // Update the activity's intent
