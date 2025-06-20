@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.zt_navigation2.R
 import com.example.zt_navigation2.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -38,7 +40,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         _binding?.button1?.setOnClickListener {
-            // todo 这里通过 NavController 导航到 Act1
+            findNavController().navigate(R.id.action_homeFragment_to_act1)
         }
     }
     override fun onDestroyView() {

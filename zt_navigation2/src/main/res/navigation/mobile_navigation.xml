@@ -22,4 +22,25 @@
         android:name="com.example.zt_navigation2.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <activity
+        android:id="@+id/act1"
+        android:name="com.example.zt_navigation2.Act1"
+        android:label="Act1"
+        tools:layout="@layout/activity_act1" />
+
+    <activity
+        android:id="@+id/act2"
+        android:name="com.example.zt_navigation2.Act2"
+        android:label="Act2"
+        tools:layout="@layout/activity_act2" />
+
+    <action
+        android:id="@+id/action_homeFragment_to_act1"
+        app:destination="@id/act1" />
+
+    <action
+        android:id="@+id/action_dashboardFragment_to_act2"
+        app:destination="@id/act2" />
+
 </navigation>
